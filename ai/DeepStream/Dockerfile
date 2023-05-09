@@ -9,9 +9,9 @@ RUN apt-get update
 # Install required dependencies
 RUN apt-get install ffmpeg python3-gi python3-dev python3-gst-1.0 -y
 
-WORKDIR /opt/nvidia/deepstream/deepstream-6.0
+WORKDIR /opt/nvidia/deepstream/deepstream
 RUN pip3 install jupyterlab
-COPY English /opt/nvidia/deepstream/deepstream-6.0
+COPY English /opt/nvidia/deepstream/deepstream
  
 #python binding 
 WORKDIR /opt/nvidia/deepstream/deepstream/sources 
@@ -28,8 +28,8 @@ RUN apt install libgirepository1.0-dev libcairo2-dev -y
 RUN pip3 install ./pyds-1.1.1-py3-none-linux_x86_64.whl
 
 
-WORKDIR /opt/nvidia/deepstream/deepstream-6.0
+WORKDIR /opt/nvidia/deepstream/deepstream
 
 
-CMD jupyter-lab --no-browser --allow-root --ip=0.0.0.0 --port=8888 --NotebookApp.token="" --notebook-dir=/opt/nvidia/deepstream/deepstream-6.0/
+CMD jupyter-lab --no-browser --allow-root --ip=0.0.0.0 --port=8888 --NotebookApp.token="" --notebook-dir=/opt/nvidia/deepstream/deepstream/
 

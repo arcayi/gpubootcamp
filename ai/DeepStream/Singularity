@@ -14,7 +14,7 @@ From: nvcr.io/nvidia/deepstream:6.0.1-triton
     apt-get -y update
     apt-get -y install ffmpeg python3-gi python3-dev python3-gst-1.0 
     
-    cd /opt/nvidia/deepstream/deepstream-6.0
+    cd /opt/nvidia/deepstream/deepstream
     pip3 install jupyterlab
     
     #python binding
@@ -29,11 +29,11 @@ From: nvcr.io/nvidia/deepstream:6.0.1-triton
     apt -y install libgirepository1.0-dev libcairo2-dev 
     pip3 install ./pyds-1.1.1-py3-none-linux_x86_64.whl
     
-    cd /opt/nvidia/deepstream/deepstream-6.0
+    cd /opt/nvidia/deepstream/deepstream
 
 %files
 
-    English/* /opt/nvidia/deepstream/deepstream-6.0/
+    English/* /opt/nvidia/deepstream/deepstream/
 
 %environment
 XDG_RUNTIME_DIR=

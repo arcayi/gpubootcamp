@@ -37,12 +37,12 @@ From: nvcr.io/nvidia/deepstream:6.0.1-triton
         pip3 install gdown
         
         #Install jupyter-lab packages
-        cd /opt/nvidia/deepstream/deepstream-6.0
+        cd /opt/nvidia/deepstream/deepstream
         pip3 install jupyterlab
         
         
-        cd /opt/nvidia/deepstream/deepstream-6.0/python/source_code/dataset/
-        python3 /opt/nvidia/deepstream/deepstream-6.0/python/source_code/dataset/download_dataset.py
+        cd /opt/nvidia/deepstream/deepstream/python/source_code/dataset/
+        python3 /opt/nvidia/deepstream/deepstream/python/source_code/dataset/download_dataset.py
         ls -l
         unzip deepstream_dataset.zip 
         
@@ -61,13 +61,13 @@ From: nvcr.io/nvidia/deepstream:6.0.1-triton
         apt install libgirepository1.0-dev libcairo2-dev -y
         pip3 install ./pyds-1.1.1-py3-none-linux_x86_64.whl
         
-        cd /opt/nvidia/deepstream/deepstream-6.0
+        cd /opt/nvidia/deepstream/deepstream
         
         
         
 %files
 
-    English/* /opt/nvidia/deepstream/deepstream-6.0
+    English/* /opt/nvidia/deepstream/deepstream
 
 %environment
 XDG_RUNTIME_DIR=

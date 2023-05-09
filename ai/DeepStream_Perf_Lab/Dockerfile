@@ -37,12 +37,12 @@ RUN pip3 install gdown
 
 
 #Install jupyter-lab packages
-WORKDIR /opt/nvidia/deepstream/deepstream-6.0
+WORKDIR /opt/nvidia/deepstream/deepstream
 RUN pip3 install jupyterlab
-COPY English /opt/nvidia/deepstream/deepstream-6.0
+COPY English /opt/nvidia/deepstream/deepstream
 
-WORKDIR /opt/nvidia/deepstream/deepstream-6.0/python/source_code/dataset/
-RUN python3 /opt/nvidia/deepstream/deepstream-6.0/python/source_code/dataset/download_dataset.py
+WORKDIR /opt/nvidia/deepstream/deepstream/python/source_code/dataset/
+RUN python3 /opt/nvidia/deepstream/deepstream/python/source_code/dataset/download_dataset.py
 RUN ls -l
 #RUN mv datasetlihvsi4dtmp  deepstream_dataset.zip
 RUN unzip deepstream_dataset.zip 
@@ -62,8 +62,8 @@ RUN apt install libgirepository1.0-dev libcairo2-dev -y
 RUN pip3 install ./pyds-1.1.1-py3-none-linux_x86_64.whl
 
 
-WORKDIR /opt/nvidia/deepstream/deepstream-6.0
+WORKDIR /opt/nvidia/deepstream/deepstream
 
 ## Uncomment this line to run Jupyter notebook by default
-CMD jupyter-lab --no-browser --allow-root --ip=0.0.0.0 --port=8888 --NotebookApp.token="" --notebook-dir=/opt/nvidia/deepstream/deepstream-6.0/python
+CMD jupyter-lab --no-browser --allow-root --ip=0.0.0.0 --port=8888 --NotebookApp.token="" --notebook-dir=/opt/nvidia/deepstream/deepstream/python
 

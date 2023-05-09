@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./ai/DeepStream/English/python/source_code"
+    ]
+}
